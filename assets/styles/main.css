@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     outline: none;
     border: none;
@@ -11,6 +12,10 @@
     --black:#000000;
     --slateblue:#4D47C3;
     --shadow:rgba(77, 71, 195, 0.4);
+    --cornflowerblue:#A7A3FF;
+    --lavender:#F0EFFF;
+    --darkgray:#B0B0B0;
+    --silver:#B5B5B5;
 }
 img{
     max-width: 100%;
@@ -19,9 +24,23 @@ img{
     padding:0  42px;
     margin: auto;
 }
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+  }
 header{
     padding: 30px 0;
-    /* background-color: #4D47C3; */
 }
 header .container a{
     font-family: "Poppins", serif;
@@ -30,15 +49,13 @@ header .container a{
     color: var(--black);
 }
 .login{
-    padding: 40px 0;
     background-color: var(--white);
-    /* background-color: rgb(42, 65, 165); */
 }
 .login .container{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    min-height: 72vh;
+    justify-content: space-between;
+    min-height:85vh;
     font-family: "Poppins", serif;
 }
 .login .container .content-box h1{
@@ -59,4 +76,70 @@ header .container a{
     font-size: 16px;
     font-weight: 600;
     color: var(--slateblue);
+}
+.login .container .form-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login .container .form-box h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--black);
+}
+.login .container .form-box form input:not(input[type="submit"]){
+    display:block;
+    width: 100%;
+    min-width: 300px;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--lavender);
+}
+.login .container .form-box form input[type="submit"]{
+    display:block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 9px;
+    background-color: var(--slateblue);
+    color: var(--white);
+    box-shadow: 0px 4px 61px 0 var(--shadow);
+}
+.login .container .form-box form input::placeholder{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cornflowerblue);
+}
+.login .container .form-box form .forgot-password{
+    text-align: end;
+}
+.login .container .form-box form .forgot-password a{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--darkgray);
+}
+.login .container .form-box .thirdparty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.login .container .form-box .thirdparty p{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--silver);
+}
+.login .container .form-box .thirdparty .icons{
+    display: inline-flex;
+    gap: 20px;
+}
+@media (max-width:768px) {
+    .login .container{
+        flex-wrap: wrap;
+        justify-content:center;
+    }
 }
