@@ -21,10 +21,42 @@ img{
 }
 header{
     padding: 30px 0;
+    /* background-color: #4D47C3; */
 }
 header .container a{
     font-family: "Poppins", serif;
     font-size: 20px;
     font-weight: 600;
     color: var(--black);
+}
+.login{
+    padding: 40px 0;
+    background-color: var(--white);
+    /* background-color: rgb(42, 65, 165); */
+}
+.login .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 72vh;
+    font-family: "Poppins", serif;
+}
+.login .container .content-box h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+.login .container .content-box  .heading p{
+    margin:10px 0 40px 0;
+    font-size: 35px;
+    font-weight: 500;
+}
+.login .container .content-box>p{
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.login .container .content-box p a{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--slateblue);
 }
